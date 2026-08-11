@@ -7,7 +7,6 @@ AutoCAD와 ZWCAD 2024에서 사용하는 토목 설계용 AutoLISP 도구 모음
 - Windows
 - AutoCAD 2021 이상
 - ZWCAD 2024
-- 현재 버전: **1.0.1**
 
 ## 설치
 
