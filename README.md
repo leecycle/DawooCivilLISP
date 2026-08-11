@@ -4,8 +4,8 @@ AutoCAD와 ZWCAD 2024에서 사용하는 토목 설계용 AutoLISP 도구 모음
 
 ## 지원 환경
 
-- Windows
-- AutoCAD 2021 이상
+- AutoCAD 2015~2024 (Windows)
+- ZWCAD 2021~2024 (Windows)
 - ZWCAD 2024
 
 ## 설치
