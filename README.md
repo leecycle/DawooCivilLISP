@@ -9,19 +9,19 @@ AutoCAD와 ZWCAD 2024에서 사용하는 토목 설계용 AutoLISP 도구 모음
 
 ## 설치
 
-1. [최신 릴리스](https://github.com/leecycle/DawooCivilLISP/releases/latest)에서 `DawooCivilLISP.1.0.4.zip`을 내려받습니다.
+1. [최신 릴리스](https://github.com/leecycle/DawooCivilLISP/releases/latest)에서 `DawooCivilLISP.1.0.5.zip`을 내려받습니다.
 2. ZIP 압축을 완전히 풉니다.
 3. `DawooCivilLISP_Install.cmd`를 실행합니다.
 4. AutoCAD 또는 ZWCAD를 다시 시작합니다.
 
 기본 설치 폴더는 `C:\DAWOO\CivilLISP`입니다. 기존 신뢰할 수 있는 위치와 APPLOAD 시작세트 항목은 유지하면서 DawooCivilLISP 경로만 중복 없이 등록합니다.
 
-## 1.0.4 업데이트 개선
+## 1.0.5 주요 변경
 
-- 기존 설치 폴더 전체를 백업한 뒤 새 패키지로 완전히 교체
-- 이전 아이콘과 하위 폴더 파일이 남지 않도록 정리
-- 파일 교체 실패 시 기존 설치 자동 복원
-- 설치·업데이트·복원 팝업을 한글로 통일
+- 16×16 및 32×32 도구막대 아이콘을 맥 스타일로 전면 교체
+- 명령별 기능을 레이어, 치수선, E.L, 좌표, 거리 눈금, NO 등의 고유 기호로 표현
+- 선 굵기, 화살촉, 절점과 그룹 색상 체계 통일
+- 1.0.4의 전체 백업, 완전 교체 및 실패 시 자동 복원 유지
 - ANSI(CP949) 한글 인코딩 유지
 
 ## 주요 명령
