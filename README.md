@@ -29,9 +29,9 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 
 1. [최신 릴리스](https://github.com/leecycle/DawooCivilLISP/releases/latest)에서 `DawooCivilLISP.*.zip`을 내려받습니다.
 2. ZIP을 완전히 압축 해제합니다.
-3. 압축을 푼 폴더에서 `DawooCivilLISP_Install.cmd`를 실행합니다.
+3. 압축을 푼 폴더에서 `Install.exe`를 실행합니다.
 4. 설치가 끝나면 AutoCAD 또는 ZWCAD를 다시 시작합니다.
-5. 명령창에서 `DWCVER`를 실행해 현재 CAD와 DawooCivilLISP 버전을 확인합니다.
+5. 명령창에서 `DWCOP`를 실행해 버전 정보와 현재 업데이트 채널을 확인합니다.
 6. `DWCHELP`를 실행하면 PDF 도움말이 열립니다.
 
 최초 설치 프로그램은 기존 설정을 지우지 않고 다음 항목을 중복 없이 추가합니다.
@@ -65,7 +65,7 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 - `DWCTOOLBAR`: DawooCivilLISP 도구막대 표시
 - `DWCTOOLBARRESET`: 메뉴와 도구막대 다시 등록
 - `DWCHELP`: PDF 도움말 열기
-- `DWCUPDATE`: 최신 정식 버전 확인 및 업데이트
+- `DWCUPDATE`: 현재 업데이트 채널의 최신 버전 확인 및 업데이트
 - `DWCROLLBACK`: 백업된 이전 버전으로 복원
 - `DWCVER`: 현재 CAD와 설치 버전 확인
 - `DWCRELOAD`: DawooCivilLISP 다시 불러오기
