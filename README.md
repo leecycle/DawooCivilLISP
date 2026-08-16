@@ -2,26 +2,24 @@
 
 ## 설명
 
-DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 및 조회 작업을 빠르고 일관되게 처리하기 위한 통합 AutoLISP 도구 모음입니다. 하나의 배포 파일로 AutoCAD와 ZWCAD 2024를 함께 지원하며 설치, 자동 로드, 메뉴 등록, 업데이트 및 복원 기능을 제공합니다.
+DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 및 조회 작업을 빠르고 일관되게 처리하는 AutoLISP 도구 모음입니다. AutoCAD와 ZWCAD 2024를 하나의 배포 파일로 지원하며 설치, 자동 로드, 메뉴, 업데이트 및 복원 기능을 제공합니다.
 
 ## 지원 환경
 
 - AutoCAD 2021 이상 (Windows)
 - ZWCAD 2024 (Windows)
-- 공용 설치 폴더: `C:\DAWOO\CivilLISP`
+- 설치 폴더: `C:\\DAWOO\\CivilLISP`
 - LISP 원본 인코딩: ANSI(CP949)
 
 ## 주요 기능
 
-- 선택 객체 및 선택 레이어 켜기·끄기
-- 문자, 치수 및 표고 편집
-- 선형 작성과 객체 방향 반전
+- 레이어, 치수, 문자 및 표고 편집
+- 중심선·수직선 작성과 선형 방향 변경
 - 면적, 좌표, 거리 및 누계 조회
-- 선형의 STA·NO 측점 조회
-- Excel 좌표 내보내기·가져오기
-- AutoCAD와 ZWCAD 자동 판별 및 전용 컴파일 파일 로드
-- 프로그램 내 자동 업데이트와 이전 버전 복원
-- 전체 기능 메뉴, 도구막대 및 PDF 도움말 제공
+- Excel 좌표 가져오기·내보내기
+- AutoCAD용 VLX와 ZWCAD용 ZELX 자동 판별
+- 정식·시험 업데이트 채널, 전체 백업, 실패 시 자동 복원
+- 전체 기능 메뉴, 도구막대 및 PDF 도움말
 
 > 토목좌표 기본 단위는 도면거리 `1 = 1.00 m`입니다.
 
@@ -30,53 +28,53 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 1. [최신 릴리스](https://github.com/leecycle/DawooCivilLISP/releases/latest)에서 `DawooCivilLISP.*.zip`을 내려받습니다.
 2. ZIP을 완전히 압축 해제합니다.
 3. 압축을 푼 폴더에서 `Install.exe`를 실행합니다.
-4. 설치가 끝나면 AutoCAD 또는 ZWCAD를 다시 시작합니다.
-5. 명령창에서 `DWCOP`를 실행해 버전 정보와 현재 업데이트 채널을 확인합니다.
+4. 설치 완료 후 AutoCAD 또는 ZWCAD를 다시 시작합니다.
+5. `DWCOP`에서 버전 정보와 업데이트 채널을 확인합니다.
 6. `DWCHELP`를 실행하면 PDF 도움말이 열립니다.
 
-최초 설치 프로그램은 기존 설정을 지우지 않고 다음 항목을 중복 없이 추가합니다.
-
-- `C:\DAWOO\CivilLISP` 신뢰 경로
-- `C:\DAWOO\CivilLISP\DawooCivilLISP.lsp` 시작하기 세트
-- 현재 CAD에 DawooCivilLISP 메뉴가 없을 때 메뉴와 도구막대 자동 등록
+최초 설치 때만 기존 설정을 보존하면서 신뢰 경로, APPLOAD 시작세트, 메뉴와 도구막대를 등록합니다.
 
 ## AutoCAD와 ZWCAD를 함께 사용하는 경우
 
-두 CAD는 같은 `C:\DAWOO\CivilLISP` 설치 폴더를 사용합니다.
-
-- AutoCAD에서는 `DawooCivilLISP_*.vlx`를 자동으로 불러옵니다.
-- ZWCAD 2024에서는 `DawooCivilLISP_*.zelx`를 자동으로 불러옵니다.
-- 메뉴 등록 상태는 AutoCAD와 ZWCAD에서 각각 확인하며, 없는 경우에만 자동 등록합니다.
-- 한 번 설치하거나 업데이트하면 AutoCAD용과 ZWCAD용 파일이 함께 교체됩니다.
+- 두 CAD는 같은 `C:\\DAWOO\\CivilLISP` 폴더를 사용합니다.
+- AutoCAD는 `DawooCivilLISP_*.vlx`, ZWCAD 2024는 `DawooCivilLISP_*.zelx`를 불러옵니다.
+- 메뉴 등록 상태는 제품별로 확인하며 없는 경우에만 복구합니다.
+- 한 번 설치하거나 업데이트하면 두 제품용 파일이 함께 교체됩니다.
 
 ## 업데이트
 
-1. CAD 명령창에서 `DWCUPDATE`를 실행합니다.
-2. 현재 버전과 GitHub의 최신 정식 릴리스를 비교합니다.
-3. 업데이트를 승인한 뒤 작업 중인 도면을 저장합니다.
-4. AutoCAD와 ZWCAD를 모두 완전히 종료합니다.
-5. 기존 설치 폴더 전체를 백업하고 새 패키지를 검증한 뒤 교체합니다.
-6. 설치에 실패하면 전체 백업을 자동으로 복원합니다.
+1. `DWCOP`에서 정식 또는 시험 채널을 선택합니다. 기본값은 정식 채널입니다.
+2. `DWCUPDATE`를 실행합니다.
+3. 정식 채널은 일반 Release, 시험 채널은 Pre-release를 포함해 최신 버전을 확인합니다.
+4. 업데이트 승인 후 도면을 저장하고 AutoCAD와 ZWCAD를 종료합니다.
+5. 기존 설치 전체를 백업하고 새 패키지를 검증한 뒤 교체합니다.
+6. 실패하면 기존 설치 전체를 자동 복원합니다.
 
-업데이트는 최초 설치 때 등록된 신뢰 위치와 시작하기 세트를 다시 변경하지 않습니다. 기존 CAD 설정과 다른 메뉴도 유지하며 DawooCivilLISP 메뉴가 있는지만 확인합니다.
+업데이트는 최초 설치 때 등록한 신뢰 위치와 시작세트를 다시 변경하지 않으며, DawooCivilLISP 메뉴 존재 여부만 확인합니다.
 
 ## 메뉴와 도움말
 
-- `DWCTOOLBAR`: DawooCivilLISP 도구막대 표시
+- `DWCOP`: 설치·백업 폴더 열기, 버전·채널 확인, 다시 불러오기, 채널 설정
+- `DWCUPDATE`: 현재 채널의 최신 버전 확인 및 업데이트
+- `DWCROLLBACK`: 백업된 이전 버전으로 복원
+- `DWCTOOLBAR`: 도구막대 표시
 - `DWCTOOLBARRESET`: 메뉴와 도구막대 다시 등록
 - `DWCHELP`: PDF 도움말 열기
-- `DWCUPDATE`: 현재 업데이트 채널의 최신 버전 확인 및 업데이트
-- `DWCROLLBACK`: 백업된 이전 버전으로 복원
-- `DWCVER`: 현재 CAD와 설치 버전 확인
-- `DWCRELOAD`: DawooCivilLISP 다시 불러오기
 
-전체 명령과 사용 방법은 설치 폴더의 `DawooCivilLISP_Help.pdf`에서 확인할 수 있습니다.
+전체 명령과 사용 방법은 설치 폴더의 `DawooCivilLISP_Help.pdf`를 참고하십시오.
+
+## 1.2.0 정식버전 변경사항
+
+- 1.1.1: JJJ 삭제, DWCB를 CBV로 변경, 관리 기능을 DWCOP로 통합, 정식·시험 채널 추가
+- 1.1.2: PowerShell 5.1 시험 채널 처리 수정, 백업·설치 검증과 실패 복원 강화
+- 1.1.3: 아이콘이 포함된 Install.exe 설치 방식 적용
+- 1.1.4: 메뉴막대 재구성, GST 명령·메뉴·도구막대 버튼 제거, 도움말 개정
+- 1.2.0: AutoCAD 메뉴막대 관리 아이콘을 BMP로 통일하고 ZWCAD 호환 유지
 
 ## 주의 사항
 
 - 설치 또는 업데이트 중에는 AutoCAD와 ZWCAD를 모두 종료해야 합니다.
-- ZIP 내부에서 설치 파일을 바로 실행하지 말고 반드시 완전히 압축 해제하십시오.
+- ZIP 내부에서 바로 실행하지 말고 반드시 완전히 압축 해제하십시오.
 - LISP 원본을 수정할 때는 ANSI(CP949) 인코딩을 유지하십시오.
 - 배포 ZIP에는 AutoCAD용 VLX와 ZWCAD용 ZELX가 모두 포함되어야 합니다.
-- 문제가 생기면 CAD를 종료한 뒤 마스터 설치본으로 다시 설치하거나 `DWCROLLBACK`을 사용하십시오.
-\n## 1.1.4 최종시험판 변경사항\n\n- 메뉴막대를 토목, 레이어·치수·문자, 뷰포트·도면 정리, Excel·거리·측점, 관리 순서로 재구성\n- GST 측점 조회 명령과 관련 메뉴·도구막대 버튼 제거\n- 나머지 도구막대 구성과 순서 유지\n- 도움말을 새 메뉴 구성에 맞춰 개정\n
+- 문제가 생기면 CAD를 종료한 뒤 `DWCROLLBACK`을 사용하거나 배포본으로 다시 설치하십시오.
