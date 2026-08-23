@@ -8,7 +8,7 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 
 - AutoCAD 2015~2024 (Windows)
 - ZWCAD 2024 (Windows)
-- 설치 폴더: `C:\\DAWOO\\CivilLISP`
+- 설치 폴더: `C:\DAWOO\CivilLISP`
 - LISP 원본 인코딩: ANSI(CP949)
 
 ## 주요 기능
