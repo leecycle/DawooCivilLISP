@@ -76,6 +76,7 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 - 1.4.0: 1.3.1~1.3.6 개선사항을 정식 적용하고 배포본에서 기능 원본 LSP 제외
 - 1.5.11: 토목 작업 명령을 DW 접두어 체계로 통일하고 ELRESET 명령 삭제
 - 1.6.0: 속성 도곽 Excel 통합, SheetSet 필드와 지번 정리 개선사항을 정식 적용
+- 1.6.1: DWMAPALI 지번 정리 기능을 DawooLISP로 이동하고 DawooCivilLISP에서 제거
 
 ## 주의 사항
 
