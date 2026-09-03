@@ -8,7 +8,7 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 
 - AutoCAD 2015~2024 (Windows)
 - ZWCAD 2024 (Windows)
-- 설치 폴더: `C:\DAWOO\CivilLISP`
+- 설치 폴더: `C:\DAWOO\DAWOO-Civil-LISP`
 - LISP 원본 인코딩: ANSI(CP949)
 
 ## 주요 기능
@@ -27,18 +27,18 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 
 ## 설치 방법
 
-1. [최신 릴리스](https://github.com/leecycle/DawooCivilLISP/releases/latest)에서 `DawooCivilLISP.*.zip`을 내려받습니다.
+1. [최신 릴리스](https://github.com/leecycle/DAWOO-Civil-LISP/releases/latest)에서 `DawooCivilLISP.*.zip`을 내려받습니다.
 2. ZIP을 완전히 압축 해제합니다.
 3. 압축을 푼 폴더에서 `Install.exe`를 실행합니다.
 4. 설치 완료 후 AutoCAD 또는 ZWCAD를 다시 시작합니다.
 5. `DWCOP`에서 버전 정보와 업데이트 채널을 확인합니다.
 6. `DWCHELP`를 실행하면 PDF 도움말이 열립니다.
 
-최초 설치 때만 기존 설정을 보존하면서 신뢰 경로, APPLOAD 시작세트, 메뉴와 도구막대를 등록합니다.
+설치 시 신뢰 경로와 APPLOAD 시작세트, 리본을 등록합니다. 2.0.0은 기존 시작세트의 구경로를 새경로로 전환하고, 구경로에서 로드된 본 제품 메뉴만 다시 불러옵니다.
 
 ## AutoCAD와 ZWCAD를 함께 사용하는 경우
 
-- 두 CAD는 같은 `C:\\DAWOO\\CivilLISP` 폴더를 사용합니다.
+- 두 CAD는 같은 `C:\DAWOO\DAWOO-Civil-LISP` 폴더를 사용합니다.
 - AutoCAD는 `DawooCivilLISP_*.vlx`, ZWCAD 2024는 `DawooCivilLISP_*.zelx`를 불러옵니다.
 - 메뉴 등록 상태는 제품별로 확인하며 없는 경우에만 복구합니다.
 - 한 번 설치하거나 업데이트하면 두 제품용 파일이 함께 교체됩니다.
@@ -52,7 +52,7 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 5. 기존 설치 전체를 백업하고 새 패키지를 검증한 뒤 교체합니다.
 6. 실패하면 기존 설치 전체를 자동 복원합니다.
 
-업데이트는 최초 설치 때 등록한 신뢰 위치와 시작세트를 다시 변경하지 않으며, DawooCivilLISP 메뉴 존재 여부만 확인합니다.
+2.0.0 전환 시 기존 `C:\DAWOO\CivilLISP` 폴더는 삭제하지 않습니다. 새 설정·백업은 `%LOCALAPPDATA%\DAWOO\DAWOO-Civil-LISP`에서 관리하며, 구경로용 1.x 백업과 분리합니다. 1.x 복귀는 이전 설치기로 재설치하세요. 수동 작성한 시작 스크립트의 구경로 참조는 별도로 확인하세요.
 
 ## 메뉴와 도움말
 
@@ -80,6 +80,8 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 - 1.6.5: 제품 정보를 `version.ini`로 통합하고 DWCALS·DWCEX·DWCIM 설정을 개선했으며, AutoCAD·ZWCAD용 DawooCivilLISP 리본 메뉴를 추가
 
 - 1.6.6 공개베타: 선형중심·도곽수정만 큰 버튼으로 유지하고 나머지는 작은 3단 리본으로 정리. 보조선정렬 등 명칭 변경, 중복 치수 버튼 제거, 뷰포트 순서 정리 및 공통 베이스 아이콘 30종 적용
+
+- 2.0.0 정식버전: 저장소 및 설치 폴더를 DAWOO-Civil-LISP로 전환하고 흰색 선·포인트 색상 아이콘 30종 적용. 기존 시작세트·리본·메뉴 경로 전환과 2.x 백업 분리
 
 ## 주의 사항
 
