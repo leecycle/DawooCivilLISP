@@ -79,6 +79,8 @@ DawooCivilLISP는 토목·CAD 실무에서 반복되는 도면 작성, 편집 �
 - 1.6.1: DWMAPALI 지번 정리 기능을 DawooLISP로 이동하고 DawooCivilLISP에서 제거. 신규 설치·업데이트 성공 팝업은 제거하고 설치 완료 화면과 GitHub 페이지 열기는 유지
 - 1.6.5: 제품 정보를 `version.ini`로 통합하고 DWCALS·DWCEX·DWCIM 설정을 개선했으며, AutoCAD·ZWCAD용 DawooCivilLISP 리본 메뉴를 추가
 
+- 1.6.6 공개베타: 선형중심·도곽수정만 큰 버튼으로 유지하고 나머지는 작은 3단 리본으로 정리. 보조선정렬 등 명칭 변경, 중복 치수 버튼 제거, 뷰포트 순서 정리 및 공통 베이스 아이콘 30종 적용
+
 ## 주의 사항
 
 - 설치 또는 업데이트 중에는 AutoCAD와 ZWCAD를 모두 종료해야 합니다.
